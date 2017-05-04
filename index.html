@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" />
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+  <div class="ui container">
+    <table id="overview" class="ui celled structured table center">
+      <thead>
+        <tr>
+          <th colspan="2"></th>
+          <th colspan="3" class="center aligned">後勤要求</th>
+          <th colspan="4" class="center aligned">總收益</th>
+          <th colspan="4" class="center aligned">每小時收益</th>
+        </tr>
+        <tr>
+          <th>後勤名稱</th>
+          <th>代號</th>
+          <th>等級</th>
+          <th>人數</th>
+          <th>時間(分鐘)</th>
+          <th>人力</th>
+          <th>彈藥</th>
+          <th>口糧</th>
+          <th>零件</th>
+          <th>人力</th>
+          <th>彈藥</th>
+          <th>口糧</th>
+          <th>零件</th>
+        </tr>
+      </thead>
+      <tbod>
+        <tr v-if="" v-for="row in rows">
+          <td v-for="item in row">
+            {{ item }}
+          </td>
+        </tr>
+      </tbod>
+    </table>
+  </div>
+
+</body>
+<script type="text/javascript" src="./js/index.js"></script>
+
+</html>
