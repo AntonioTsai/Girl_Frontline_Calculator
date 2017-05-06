@@ -7,17 +7,23 @@ var overview = new Vue({
     fetch('/resource.csv').then(response => {
       return response.text();
     }).then(text => {
-      // Split text in to array
       battles = text.split("\n");
 
       // Cut off first two rows from csv
       battles = battles.slice(2);
 
+      // Conver array to JSON
+      var name = ["name", "code", "level", "member", "time",
+                  "human_resource", "ammo", "ration", "component",
+                  "human_resource_hour", "ammo_hour", "ration_hour", "component_hour"];
       this.logistics = battles.map(battle => {
-        return battle.split(",");
+        var object = {};
+        battle.split(",").map((attr, i) => {
+          object[name[i]] = attr;
+        });
+
+        return object;
       });
     });
   }
 });
-
-// name, code, level, member, time, human_resource, ammo, ration, component, human_resource_hour, ammo_hour, ration_hour, component_hour
