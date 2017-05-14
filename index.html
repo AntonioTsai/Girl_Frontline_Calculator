@@ -37,7 +37,7 @@
       </thead>
       <tbod>
         <tr v-if="" v-for="battles in logistics">
-          <td v-for="battle in battles">
+          <td v-bind:class="key" v-for="(battle, key) in battles">
             {{ battle }}
           </td>
         </tr>
