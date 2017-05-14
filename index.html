@@ -10,8 +10,10 @@
 </head>
 
 <body>
-  <div class="ui container">
-    <table id="overview" class="ui celled structured table center">
+  <div id="overview" class="ui container">
+    <label for="level">Level {{level}}</label>
+    <input id="level" type="number" v-model.number="level">
+    <table class="ui celled structured table center">
       <thead>
         <tr>
           <th colspan="2"></th>

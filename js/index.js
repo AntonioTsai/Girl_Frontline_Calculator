@@ -1,6 +1,7 @@
 var overview = new Vue({
   el: '#overview',
   data: {
+    level: 1,
     logistics: [],
   },
   created: function () {
