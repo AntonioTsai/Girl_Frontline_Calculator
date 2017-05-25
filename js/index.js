@@ -10,10 +10,16 @@ var overview = new Vue({
       // `this` points to the vm instance
       // return this.message.split('').reverse().join('')
       return this.logistics.filter((battle) => {
-        if('level' in battle && this.level >= battle.level) {
+        if ('level' in battle && this.level >= battle.level) {
           return true;
         }
         return false;
+      }).sort((a, b) => {
+        // Sort by sum of four profit/hour
+        sum_a = a.human_resource_hour + a.ammo_hour + a.ration_hour + a.component_hour;
+        sum_b = b.human_resource_hour + b.ammo_hour + b.ration_hour + b.component_hour;
+
+        return sum_b - sum_a;
       });
     }
   },
