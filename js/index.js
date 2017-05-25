@@ -4,6 +4,19 @@ var overview = new Vue({
     level: 1,
     logistics: [],
   },
+  computed: {
+    efficient_logistics: function () {
+      // Vue.js official sample
+      // `this` points to the vm instance
+      // return this.message.split('').reverse().join('')
+      return this.logistics.filter((battle) => {
+        if('level' in battle && battle.level > this.level) {
+          return true;
+        }
+        return false;
+      });
+    }
+  },
   created: function () {
     fetch('/resource.csv').then(response => {
       return response.text();
@@ -15,8 +28,8 @@ var overview = new Vue({
 
       // Conver array to JSON
       var name = ["name", "code", "level", "member", "time",
-                  "human_resource", "ammo", "ration", "component",
-                  "human_resource_hour", "ammo_hour", "ration_hour", "component_hour"];
+        "human_resource", "ammo", "ration", "component",
+        "human_resource_hour", "ammo_hour", "ration_hour", "component_hour"];
       this.logistics = battles.map(battle => {
         var object = {};
         battle.split(",").map((attr, i) => {
