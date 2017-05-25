@@ -39,11 +39,11 @@
         </tr>
       </thead>
       <tbod>
-        <!--<tr v-bind:class="{disabled: level < battle.level}" v-for="battle in logistics">
+        <tr v-for="battle in efficient_logistics">
           <td v-bind:class="key" v-for="(attr, key) in battle">
             {{ attr }}
           </td>
-        </tr>-->
+        </tr>
       </tbod>
     </table>
 
@@ -71,13 +71,13 @@
           <th>零件</th>
         </tr>
       </thead>
-      <tbod>
+      <tbody>
         <tr v-bind:class="{disabled: level < battle.level}" v-for="battle in logistics">
           <td v-bind:class="key" v-for="(attr, key) in battle">
             {{ attr }}
           </td>
         </tr>
-      </tbod>
+      </tbody>
     </table>
   </div>
 
