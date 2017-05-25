@@ -38,7 +38,7 @@
         </tr>
       </thead>
       <tbod>
-        <tr v-if="level >= battle.level" v-for="battle in logistics">
+        <tr v-bind:class="{disabled: level < battle.level}" v-for="battle in logistics">
           <td v-bind:class="key" v-for="(attr, key) in battle">
             {{ attr }}
           </td>
