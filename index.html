@@ -11,7 +11,7 @@
 
 <body>
   <div id="overview" class="ui container">
-    <label for="level">Level {{level}}</label>
+    <label for="level">隊長等級</label>
     <input id="level" type="number" v-model.number="level">
     <table class="ui celled structured table center">
       <thead>
@@ -38,9 +38,9 @@
         </tr>
       </thead>
       <tbod>
-        <tr v-if="" v-for="battles in logistics">
-          <td v-bind:class="key" v-for="(battle, key) in battles">
-            {{ battle }}
+        <tr v-bind:class="{disabled: level < battle.level}" v-for="battle in logistics">
+          <td v-bind:class="key" v-for="(attr, key) in battle">
+            {{ attr }}
           </td>
         </tr>
       </tbod>
