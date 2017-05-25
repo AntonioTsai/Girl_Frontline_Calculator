@@ -10,7 +10,7 @@ var overview = new Vue({
       // `this` points to the vm instance
       // return this.message.split('').reverse().join('')
       return this.logistics.filter((battle) => {
-        if('level' in battle && battle.level > this.level) {
+        if('level' in battle && this.level > battle.level) {
           return true;
         }
         return false;
