@@ -1,6 +1,12 @@
 var overview = new Vue({
   el: '#overview',
   data: {
+    filter: {
+      human_resource: true,
+      ammo: true,
+      ration: true,
+      component: true,
+    },
     level: 1,
     teams: 1,
     logistics: [],
