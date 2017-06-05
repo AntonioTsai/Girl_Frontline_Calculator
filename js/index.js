@@ -2,6 +2,7 @@ var overview = new Vue({
   el: '#overview',
   data: {
     level: 1,
+    teams: 1,
     logistics: [],
   },
   computed: {

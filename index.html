@@ -13,6 +13,8 @@
   <div id="overview" class="ui container">
     <label for="level">隊長等級</label>
     <input id="level" type="number" v-model.number="level">
+    <label for="teams">後勤隊伍</label>
+    <input id="teams" type="number" min="1" max="4" v-model.number="teams">
 
     <table class="ui celled structured table center">
       <thead>
