@@ -21,7 +21,7 @@ var overview = new Vue({
         sum_b = b.human_resource_hour + b.ammo_hour + b.ration_hour + b.component_hour;
 
         return sum_b - sum_a;
-      }).slice(0, 4);
+      }).slice(0, this.teams); // Show only top `temas`'s efficient battles
     }
   },
   created: function () {
