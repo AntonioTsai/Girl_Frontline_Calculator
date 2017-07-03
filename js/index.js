@@ -23,8 +23,24 @@ var overview = new Vue({
         return false;
       }).sort((a, b) => {
         // Sort by sum of four profit/hour
-        sum_a = a.human_resource_hour + a.ammo_hour + a.ration_hour + a.component_hour;
-        sum_b = b.human_resource_hour + b.ammo_hour + b.ration_hour + b.component_hour;
+        let sum_a = 0;
+        let sum_b = 0;
+        if (this.filter.ammo) {
+          sum_a += a.ammo_hour;
+          sum_b += b.ammo_hour;
+        }
+        if (this.filter.component) {
+          sum_a += a.component_hour;
+          sum_b += b.component_hour;
+        }
+        if (this.filter.human_resource) {
+          sum_a += a.human_resource_hour;
+          sum_b += b.human_resource_hour;
+        }
+        if (this.filter.ration) {
+          sum_a += a.ration_hour;
+          sum_b += b.ration_hour;
+        }
 
         return sum_b - sum_a;
       }).slice(0, this.teams); // Show only top `temas`'s efficient battles
