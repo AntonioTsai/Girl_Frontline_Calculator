@@ -47,7 +47,7 @@ var overview = new Vue({
         }
     },
     created: function () {
-        fetch('/resource.csv').then(response => {
+        fetch('resource.csv').then(response => {
             return response.text();
         }).then(text => {
             battles = text.split("\n");
