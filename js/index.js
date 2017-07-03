@@ -62,7 +62,12 @@ var overview = new Vue({
       this.logistics = battles.map(battle => {
         var object = {};
         battle.split(",").map((attr, i) => {
-          object[name[i]] = attr;
+          // Change all data type to Int except name & code
+          if (name[i] != 'name' && name[i] != 'code') {
+            object[name[i]] = parseInt(attr);
+          } else {
+            object[name[i]] = attr;
+          }
         });
 
         return object;
