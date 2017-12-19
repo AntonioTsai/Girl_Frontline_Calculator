@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" />
   <link rel="stylesheet" href="./css/style.css">
   <script src="https://unpkg.com/vue"></script>
+  <!-- import CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- import JavaScript -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 </head>
 
 <body>
@@ -16,13 +20,13 @@
     <label for="teams">後勤隊伍</label>
     <input id="teams" type="number" min="1" max="4" v-model.number="teams">
     <div class="ui form">
-      <input type="checkbox" tabindex="0" class="hidden"  v-model="filter.human_resource">
+      <input type="checkbox" tabindex="0" class="hidden" v-model="filter.human_resource">
       <label>人力</label>
-      <input type="checkbox" tabindex="0" class="hidden"  v-model="filter.ammo">
+      <input type="checkbox" tabindex="0" class="hidden" v-model="filter.ammo">
       <label>彈藥</label>
-      <input type="checkbox" tabindex="0" class="hidden"  v-model="filter.ration">
+      <input type="checkbox" tabindex="0" class="hidden" v-model="filter.ration">
       <label>口糧</label>
-      <input type="checkbox" tabindex="0" class="hidden"  v-model="filter.component">
+      <input type="checkbox" tabindex="0" class="hidden" v-model="filter.component">
       <label>零件</label>
     </div>
 
