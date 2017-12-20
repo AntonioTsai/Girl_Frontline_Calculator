@@ -2,102 +2,14 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>Calculator</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" />
-  <link rel="stylesheet" href="./css/style.css">
-  <script src="https://unpkg.com/vue"></script>
-  <!-- import CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-  <!-- import JavaScript -->
-  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>girl_frontline_calculator</title>
 </head>
 
 <body>
-  <div id="overview" class="ui container">
-    <label for="level">隊長等級</label>
-    <input id="level" type="number" v-model.number="level">
-    <label for="teams">後勤隊伍</label>
-    <input id="teams" type="number" min="1" max="4" v-model.number="teams">
-    <div class="ui form">
-      <input type="checkbox" tabindex="0" class="hidden" v-model="filter.human_resource">
-      <label>人力</label>
-      <input type="checkbox" tabindex="0" class="hidden" v-model="filter.ammo">
-      <label>彈藥</label>
-      <input type="checkbox" tabindex="0" class="hidden" v-model="filter.ration">
-      <label>口糧</label>
-      <input type="checkbox" tabindex="0" class="hidden" v-model="filter.component">
-      <label>零件</label>
-    </div>
-
-    <table class="ui celled structured table center">
-      <thead>
-        <tr>
-          <th colspan="2"></th>
-          <th colspan="3" class="center aligned">後勤要求</th>
-          <th colspan="4" class="center aligned">總收益</th>
-          <th colspan="4" class="center aligned">每小時收益</th>
-        </tr>
-        <tr>
-          <th>後勤名稱</th>
-          <th>代號</th>
-          <th>等級</th>
-          <th>人數</th>
-          <th>時間(分鐘)</th>
-          <th>人力</th>
-          <th>彈藥</th>
-          <th>口糧</th>
-          <th>零件</th>
-          <th>人力</th>
-          <th>彈藥</th>
-          <th>口糧</th>
-          <th>零件</th>
-        </tr>
-      </thead>
-      <tbod>
-        <tr v-for="battle in efficient_logistics">
-          <td v-bind:class="key" v-for="(attr, key) in battle">
-            {{ attr }}
-          </td>
-        </tr>
-      </tbod>
-    </table>
-
-    <table class="ui celled structured table center">
-      <thead>
-        <tr>
-          <th colspan="2"></th>
-          <th colspan="3" class="center aligned">後勤要求</th>
-          <th colspan="4" class="center aligned">總收益</th>
-          <th colspan="4" class="center aligned">每小時收益</th>
-        </tr>
-        <tr>
-          <th>後勤名稱</th>
-          <th>代號</th>
-          <th>等級</th>
-          <th>人數</th>
-          <th>時間(分鐘)</th>
-          <th>人力</th>
-          <th>彈藥</th>
-          <th>口糧</th>
-          <th>零件</th>
-          <th>人力</th>
-          <th>彈藥</th>
-          <th>口糧</th>
-          <th>零件</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-bind:class="{disabled: level < battle.level}" v-for="battle in logistics">
-          <td v-bind:class="key" v-for="(attr, key) in battle">
-            {{ attr }}
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
 </body>
-<script type="text/javascript" src="./js/index.js"></script>
 
 </html>
