@@ -28,11 +28,11 @@ const resources = [
     title: '人力',
   },
   {
-    label: 'ration',
+    label: 'ammo',
     title: '彈藥',
   },
   {
-    label: 'ammo',
+    label: 'ration',
     title: '口糧',
   },
   {
