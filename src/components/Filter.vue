@@ -1,6 +1,6 @@
 <template>
   <div class="filter">
-    <el-row>
+    <el-row type="flex">
       <el-col :span="6">
         <label>隊長等級</label>
         <el-input-number v-model="captainLevel" :min="1" :max="100"></el-input-number>
