@@ -81,6 +81,11 @@ export default {
       });
     },
   },
+  created() {
+    this.captainLevel = this.$store.state.captainLevel;
+    this.teamNumber = this.$store.state.teamNumber;
+    this.resourceFilter = this.$store.state.resourceFilter;
+  },
 };
 </script>
 
