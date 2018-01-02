@@ -5,8 +5,8 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    captainLevel: 1,
-    teamNumber: 1,
+    captainLevel: 10,
+    teamNumber: 4,
     resourceFilter: [
       'human_resource',
       'ammo',
